@@ -12,5 +12,11 @@ def Home():
 def Stock():
     return render_template('stock.html', products=products)
 
+@app.route('/add', methods=['GET', 'POST'])
+def Add():
+    if request.method == 'POST':
+        pass
+    return render_template('add.html')
+
 if __name__ == "__main__":
     app.run(debug=True)

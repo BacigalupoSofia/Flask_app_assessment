@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% block title %} Add Product - Dental Inventory App
+{% endblock %} {% block content %}
+
+<h2>Add Product</h2>
+<!-- A form to add a new product to the inventory. -->
+<!-- The form will have fields for the product name, brand, and quantity. 
+ When the form is submitted, it will send a POST request to the server with the new product information. -->
+
+<form method="POST">
+  <legend>New Product Information</legend>
+  <fieldset>
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="Protection_and_consumables">
+        Protection and consumables
+      </option>
+      <option value="Restorative">Restorative</option>
+      <option value="Surgery">Surgery</option>
+    </select>
+
+    <label for="name">Name</label>
+    <input type="text" name="name" />
+
+    <label for="brand">Brand</label>
+    <input type="text" id="brand" name="brand" />
+
+    <label for="Supplier">Supplier</label>
+    <select name="Supplier" id="Supplier">
+      <option value="DMI">DMI</option>
+      <option value="Dontalia">Dontalia</option>
+      <option value="HenrySchein">Henry Schein</option>
+    </select>
+
+    <label for="quantity">Quantity</label>
+    <input type="number" name="quantity" id="quantity" />
+
+    <label for="minimum">Minimum Quantity</label>
+    <input type="number" name="minimum" id="minimum" />
+
+    <label for="expiration">Expiration Date</label>
+    <input type="date" name="expiration" id="expiration" />
+
+    <button type="submit">Add Product</button>
+  </fieldset>
+</form>
+
+{% endblock %}
