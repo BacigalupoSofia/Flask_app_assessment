@@ -29,5 +29,10 @@ def Add():
         return redirect(url_for('Stock'))
     return render_template('add.html')
 
+@app.route('/delete/<int:product_id>')
+def Delete(product_id):
+    return render_template('delete.html', products=products)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
