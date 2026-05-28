@@ -34,5 +34,13 @@ def Delete(product_id):
     return render_template('delete.html', products=products)
 
 
+@app.route('/info/<int:product_id>')
+def Info(product_id):
+    product = products[product_id-1]
+    return render_template('info.html', product=product)
+
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
