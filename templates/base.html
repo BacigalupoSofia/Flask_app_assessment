@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Dental Inventory App {% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='stylesheet.css') }}"
+    />
+  </head>
+
+  <header><h1>Dental Inventory App</h1></header>
+
+  <body>
+    {% block content %} {% endblock %}
+  </body>
+
+  <footer>
+    <p>&copy; 2026 Dental Inventory App. All rights reserved.</p>
+  </footer>
+</html>
