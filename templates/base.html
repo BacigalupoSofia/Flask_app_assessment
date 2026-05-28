@@ -10,7 +10,22 @@
     />
   </head>
 
-  <header><h1>Dental Inventory App</h1></header>
+  <header>
+    <img
+      src="{{ url_for('static', filename='logo_inventary.png') }}"
+      alt="Logo"
+      class="image"
+    />
+    <div>
+      <h1>Dental Inventory App</h1>
+      <p>The solution for managing dental inventory</p>
+    </div>
+
+    <nav>
+      <a href="#"> Home </a>
+      <a href="#">Log In</a>
+    </nav>
+  </header>
 
   <body>
     {% block content %} {% endblock %}
