@@ -12,27 +12,31 @@ endblock %} {% block content %} {% block head %}
 
 <div class="features">
   <div>
-    <img
-      src=" {{ url_for('static', filename='list.png') }}"
-      alt=" Items list picture"
+    <a href="{{ url_for('Stock') }}">
+      <img
+        src=" {{ url_for('static', filename='list.png') }}"
+        alt=" Items list picture"
     />
-    <p>List of Dental Items</p>
+    <p>List of Dental Items</p></a>
   </div>
   <div>
+    <a href="{{ url_for('Info')}}">
     <img
       src=" {{ url_for('static', filename='stock.png') }}"
       alt="Stock picture"
     />
-    <p>Detail of Your Stock</p>
+    <p>Detail of Your Stock</p></a>
   </div>
   <div>
+    <a href="{{ url_for('#') }}">
     <img
       src=" {{ url_for('static', filename='alert.png') }}"
       alt="Low Stock Alert picture"
     />
-    <p>Alert when Stock is Low</p>
+    <p>Alert when Stock is Low</p> </a>
   </div>
   <div>
+    <a href="{{ url_for('#') }}">
     <img
       src=" {{ url_for('static', filename='orders.png') }}"
       alt="Orders and Provider picture"
