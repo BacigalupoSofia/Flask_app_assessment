@@ -27,7 +27,7 @@ products = [
         "supplier": "Dontalia",
         "quantity": 1,
         "minimum_stock": 1,
-        "expiry_date": "31/12/2027"
+        "expiry_date": "31/12/2027",
     },
     {
         "id": 4,
@@ -50,3 +50,11 @@ products = [
         "expiry_date": "31/12/2027"
     }
 ]
+
+images = {
+    1: "",
+    2: "",
+    3: "gelatamp.jpg",
+    4: "venus.jpg",
+    5: "#" }
+

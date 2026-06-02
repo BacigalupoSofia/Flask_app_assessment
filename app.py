@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from data_base import products
+from data_base import products, images
 
 
 app = Flask(__name__)
@@ -32,15 +32,19 @@ def Add():
 @app.route('/delete/<int:product_id>', methods=['GET', 'POST'])
 def Delete(product_id):
     deleting = next((p for p in products if p['id'] == product_id), None)
+    product_image = images.get(product_id)
 
     if deleting is None:
         return "Product not found", 404
 
     if request.method == 'POST':
-        products.remove(deleting)
-        return redirect(url_for('Stock'))
+        if deleting in products:
+            products.remove(deleting)
+            return redirect(url_for('Stock'))
 
-    return render_template('delete.html', deleting=deleting)
+    return render_template('delete.html', 
+                           deleting=deleting, 
+                           product_image=product_image)
 
 
 @app.route('/info/<int:product_id>')

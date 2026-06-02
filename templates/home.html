@@ -20,7 +20,7 @@ endblock %} {% block content %} {% block head %}
     <p>List of Dental Items</p></a>
   </div>
   <div>
-    <a href="{{ url_for('Info')}}">
+    <a href="{{ url_for('Stock')}}">
     <img
       src=" {{ url_for('static', filename='stock.png') }}"
       alt="Stock picture"
@@ -28,7 +28,7 @@ endblock %} {% block content %} {% block head %}
     <p>Detail of Your Stock</p></a>
   </div>
   <div>
-    <a href="{{ url_for('#') }}">
+    <a href="">
     <img
       src=" {{ url_for('static', filename='alert.png') }}"
       alt="Low Stock Alert picture"
@@ -36,7 +36,7 @@ endblock %} {% block content %} {% block head %}
     <p>Alert when Stock is Low</p> </a>
   </div>
   <div>
-    <a href="{{ url_for('#') }}">
+    <a href="#">
     <img
       src=" {{ url_for('static', filename='orders.png') }}"
       alt="Orders and Provider picture"
