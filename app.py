@@ -29,9 +29,18 @@ def Add():
         return redirect(url_for('Stock'))
     return render_template('add.html')
 
-@app.route('/delete/<int:product_id>')
+@app.route('/delete/<int:product_id>', methods=['GET', 'POST'])
 def Delete(product_id):
-    return render_template('delete.html', products=products)
+    deleting = next((p for p in products if p['id'] == product_id), None)
+
+    if deleting is None:
+        return "Product not found", 404
+
+    if request.method == 'POST':
+        products.remove(deleting)
+        return redirect(url_for('Stock'))
+
+    return render_template('delete.html', deleting=deleting)
 
 
 @app.route('/info/<int:product_id>')
