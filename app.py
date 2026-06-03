@@ -50,7 +50,8 @@ def Delete(product_id):
 @app.route('/info/<int:product_id>')
 def Info(product_id):
     product = products[product_id-1]
-    return render_template('info.html', product=product)
+    product_image = images.get(product_id)
+    return render_template('info.html', product=product, product_image=product_image )
 
 
 
