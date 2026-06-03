@@ -23,13 +23,13 @@ endblock %} {% block content %}
       <td>{{ product.quantity }}</td>
 
       <td>
-        <a href="#"> Edit </a>
+        <a href=""> Edit </a>
         |
-        <a href="#"> Delete </a>
+        <a href="{{ url_for('Delete', product_id=product.id) }}"> Delete </a>
       </td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
-<button><a href="#">Add Product</a></button>
+<button><a href="{{ url_for('Add') }}">Add Product</a></button>
 {% endblock %}
