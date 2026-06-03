@@ -52,9 +52,8 @@ products = [
 ]
 
 images = {
-    1: "",
-    2: "",
+    1: "gloves.jpg",
+    2: "optibond.jpg",
     3: "gelatamp.jpg",
     4: "venus.jpg",
-    5: "#" }
-
+    5: "palodent.jpg" }
