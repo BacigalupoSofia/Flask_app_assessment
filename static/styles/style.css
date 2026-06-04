@@ -7,17 +7,19 @@
 header {
   display: flex;
   align-items: center;
-  background-color: #193ee0;
-  color: rgb(255 205 183);
+  background-color: #3958e3;
+  color: rgb(242, 188, 165);
   padding: 20px;
   text-align: center;
-  gap: 50px;
+  gap: 30px;
   width: 100%;
+  height: 15vh;
 }
 
 header h1 {
-  font-size: 40px;
+  font-size: 2rem;
   font-weight: 800;
+  margin-bottom: 0;
 }
 
 p {
@@ -26,8 +28,8 @@ p {
 }
 
 .image {
-  width: 10rem;
-  height: auto;
+  width: auto;
+  height: 15vh;
 }
 
 nav {
@@ -48,6 +50,11 @@ nav a:focus {
   color: rgb(255 205 183);
 }
 
+.content {
+  padding: 20px;
+  height: 75vh;
+}
+
 footer {
   background-color: #193ee0;
   color: rgb(255 205 183);
@@ -55,5 +62,6 @@ footer {
   padding: 10px;
   bottom: 0;
   width: 100%;
+  height: 10vh;
   margin-top: 50px;
 }
