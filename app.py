@@ -73,13 +73,13 @@ def Delete(product_id):
 
 @app.route('/edit/<int:product_id>')
 def Edit(product_id):
-    editing = next((p for p in products if p['id'] == product_id), None)
+    product = next((p for p in products if p['id'] == product_id), None)
 
-    if editing is None:
+    if product is None:
         flash(f"Product not found.", "danger")
         return redirect(url_for('Stock'))
 
-    return render_template('edit.html', editing=editing)
+    return render_template('edit.html', product=product)
    
 
 

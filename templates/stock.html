@@ -46,7 +46,7 @@ endblock %} {% block content %}
 
         <td>
           <div class="btn-group btn-group-sm">
-            <a class="btn btn-outline-primary">Edit</a>
+            <a  href="{{ url_for('Edit', product_id=product.id) }}" class="btn btn-outline-primary">Edit</a>
             <a
               href="{{ url_for('Delete', product_id=product.id) }}"
               class="btn btn-outline-primary"

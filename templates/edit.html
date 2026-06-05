@@ -1,6 +1,112 @@
 {% extends "base.html" %} {% block title %} Product Details and Edit {% endblock
 %} {% block content %}
 
-<h2>{{ editing.name }}</h2>
+<h2>{{ product.name }}</h2>
+
+<div>
+  <div>
+    <img
+      src="{{ url_for('static', filename='images/' + product.image) }}"
+      alt="{{ product.name }}"
+    />
+  </div>
+
+  <form method="POST">
+    <div class="mb-3">
+      <label for="category" class="form-label">Category</label>
+      <select id="category" name="category" class="form-select">
+        <option value="{{ product.category}}" selected disabled>
+          {{ product.category}}
+        </option>
+        <option value="Protection_and_consumables">
+          Protection and Consumables
+        </option>
+        <option value="Restorative">Restorative</option>
+        <option value="Surgery">Surgery</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label>Name</label>
+      <input
+        type="text"
+        name="name"
+        value="{{ product.name }}"
+        class="form-control"
+      />
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Brand</label>
+        <input
+          type="text"
+          name="brand"
+          value="{{ product.brand }}"
+          class="form-control"
+        />
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="Supplier" class="form-label">Supplier</label>
+        <select id="Supplier" name="Supplier" class="form-select">
+          <option value="{{ product.supplier }}" selected disabled>
+            {{ product.supplier }}
+          </option>
+          <option value="DMI">DMI</option>
+          <option value="Dontalia">Dontalia</option>
+          <option value="HenrySchein">Henry Schein</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label"> Description </label>
+      <textarea
+        id="description"
+        name="description"
+        rows="4"
+        class="form-control"
+      >
+{{ request.form.get('description', '') }}</textarea
+      >
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Quantity</label>
+        <input
+          type="number"
+          name="quantity"
+          value="{{ product.quantity }}"
+          class="form-control"
+        />
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label>Minimum Stock</label>
+        <input
+          type="number"
+          name="minimum_stock"
+          value="{{ product.minimum_stock }}"
+          class="form-control"
+        />
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="expiration" class="form-label"> Expiration Date </label>
+      <input
+        type="date"
+        id="expiration"
+        name="expiration"
+        value="{{ request.form.get('expiration', '') }}"
+        class="form-control"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-success">Save Changes</button>
+  </form>
+</div>
 
 {% endblock %}
