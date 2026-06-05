@@ -59,6 +59,8 @@ def Delete(product_id):
     if request.method == 'POST':
         if deleting in products:
             products.remove(deleting)
+            for index, product in enumerate(products, start=1):
+                product['id'] = index
             flash(f"{deleting['name']} was deleted successfully.", "success")
             return redirect(url_for('Stock'))
 
