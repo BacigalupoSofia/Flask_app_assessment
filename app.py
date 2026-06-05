@@ -53,8 +53,9 @@ def Delete(product_id):
     product_image = images.get(product_id)
 
     if deleting is None:
-        flash("Product not found.", "error")
+        flash(f"Product not found.", "danger")
         return redirect(url_for('Stock'))
+
 
     if request.method == 'POST':
         if deleting in products:
@@ -63,6 +64,7 @@ def Delete(product_id):
                 product['id'] = index
             flash(f"{deleting['name']} was deleted successfully.", "success")
             return redirect(url_for('Stock'))
+       
 
     return render_template('delete.html', 
                            deleting=deleting, 
