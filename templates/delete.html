@@ -18,12 +18,10 @@ App {% endblock %} {% block content %}
     </table>
   </div>
   <div id="delete-image">
-    {% if product_image %}
     <img
-      src="{{ url_for('static', filename='images/' + product_image) }}"
+      src="{{ url_for('static', filename='images/' + deleting.image) }}"
       alt="{{ deleting.name }}"
     />
-    {% endif %}
   </div>
 </div>
 

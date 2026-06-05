@@ -7,7 +7,8 @@ products = [
         "supplier": "DMI",
         "quantity": 3,
         "minimum_stock": 2,
-        "expiry_date": "31/12/2027"
+        "expiry_date": "31/12/2027",
+        "image": "gloves.jpg"
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@ products = [
         "supplier": "Dontalia",
         "quantity": 2,
         "minimum_stock": 1,
-        "expiry_date": "31/12/2027"
+        "expiry_date": "31/12/2027",
+        "image": "optibond.jpg"
     },
     {
         "id": 3,
@@ -28,6 +30,7 @@ products = [
         "quantity": 1,
         "minimum_stock": 1,
         "expiry_date": "31/12/2027",
+        "image": "gelatamp.jpg"
     },
     {
         "id": 4,
@@ -37,7 +40,8 @@ products = [
         "supplier": "Dontalia",
         "quantity": 1,
         "minimum_stock": 1,
-        "expiry_date": "31/12/2027"
+        "expiry_date": "31/12/2027",
+        "image": "venus.jpg"
     },
     {
         "id": 5,
@@ -47,16 +51,11 @@ products = [
         "supplier": "Henry Schein",
         "quantity": 1,
         "minimum_stock": 1, 
-        "expiry_date": "31/12/2027"
+        "expiry_date": "31/12/2027",
+        "image": "palodent.jpg"
     }
 ]
 
-images = {
-    1: "gloves.jpg",
-    2: "optibond.jpg",
-    3: "gelatamp.jpg",
-    4: "venus.jpg",
-    5: "palodent.jpg" }
 
 products_details = [
     {"name": "Latex Powder Free Gloves Small Pack 100",
