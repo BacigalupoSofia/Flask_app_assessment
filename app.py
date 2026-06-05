@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from data_base import products, images
 
 
 app = Flask(__name__)
+app.secret_key = "your_secret_key"
 
 @app.route('/')
 def Home():
@@ -52,11 +53,13 @@ def Delete(product_id):
     product_image = images.get(product_id)
 
     if deleting is None:
-        return "Product not found", 404
+        flash("Product not found.", "error")
+        return redirect(url_for('Stock'))
 
     if request.method == 'POST':
         if deleting in products:
             products.remove(deleting)
+            flash(f"{deleting['name']} was deleted successfully.", "success")
             return redirect(url_for('Stock'))
 
     return render_template('delete.html', 

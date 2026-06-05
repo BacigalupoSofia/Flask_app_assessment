@@ -81,3 +81,12 @@ footer {
   margin: 0 auto;
   margin-top: 20px;
 }
+
+/* General heading in my pages*/
+h2,
+h3 {
+  color: #333;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}

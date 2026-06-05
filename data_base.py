@@ -57,3 +57,16 @@ images = {
     3: "gelatamp.jpg",
     4: "venus.jpg",
     5: "palodent.jpg" }
+
+products_details = [
+    {"name": "Latex Powder Free Gloves Small Pack 100",
+     "description": ""},
+    {"name": "Optibond FL primer 8ml",
+     "description": ""},
+    {"name": "Gelatamp Jar 50 units",
+     "description": ""},
+    {"name": "Venus Pearl Syringe A1 3g",
+     "description": ""},
+    {"name": "Matrix bands Palodent standard 100 units",
+     "description": ""}
+]

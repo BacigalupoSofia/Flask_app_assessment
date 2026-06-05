@@ -2,7 +2,7 @@
 App {% endblock %} {% block content %} {% block head %}
 <link
   rel="stylesheet"
-  href="{{ url_for('static', filename='style_delete.css') }}"
+  href="{{ url_for('static', filename='styles/style_delete.css') }}"
 />
 {% endblock %}
 
@@ -10,21 +10,21 @@ App {% endblock %} {% block content %} {% block head %}
 
 <div><h3>ID: {{ deleting.id }} {{ deleting.name }}</h3></div>
 
-<div class="table_picture">
+<div class="table">
   <div>
     <table>
       {% for key, value in deleting.items() %}
-      <tr>
-        <td>{{ key }}</td>
-        <td>{{ value }}</td>
-      </tr>
+        <tr>
+          <th>{{ key }}</td>
+          <td>{{ value }}</td>
+        </tr>
       {% endfor %}
     </table>
   </div>
   <div>
     {% if product_image %}
     <img
-      src="{{ url_for('static', filename=product_image) }}"
+      src="{{ url_for('static', filename='images/' + product_image) }}"
       alt="{{ deleting.name }}"
     />
     {% endif %}
