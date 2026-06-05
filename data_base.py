@@ -6,7 +6,7 @@ products = [
         "brand": "DMI",
         "supplier": "DMI",
         "quantity": 3,
-        "minimum_stock": 2,
+        "minimum_stock": 5,
         "expiry_date": "31/12/2027",
         "image": "gloves.jpg"
     },
