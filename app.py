@@ -19,12 +19,13 @@ def Add():
         new_product = {
             "id": len(products) + 1,
             "category": request.form.get('category'),
-            "name": request.form.get('name').strip(),
+            "name": request.form.get('name').strip().title(),
             "brand": request.form.get('brand'),
-            "Supplier": request.form.get('Supplier'),
+            "supplier": request.form.get('Supplier'),
             "quantity": int(request.form.get('quantity')),
-            "minimum": int(request.form.get('minimum')),
-            "expiration": request.form.get('expiration')
+            "minimum_stock": int(request.form.get('minimum')),
+            "expiry_date": request.form.get('expiration'),
+            "image": request.form.get('image', "")
         }
 
         errors = []
@@ -34,15 +35,16 @@ def Add():
             errors.append("Name is required.")
         if not new_product["brand"]:
             errors.append("Brand is required.")
-        if not new_product["Supplier"]:
+        if not new_product["supplier"]:
             errors.append("Supplier is required.")
-        if not new_product["expiration"]:
-            errors.append("Expiration date is required.")
+        if not new_product["expiry_date"]:
+            errors.append("Expiry date is required.")
 
         if errors:
             return render_template('add.html', errors=errors)
 
         products.append(new_product)
+        flash(f"{new_product['name']} was added successfully.", "success")
         return redirect(url_for('Stock'))
     
     return render_template('add.html')
