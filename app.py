@@ -71,11 +71,16 @@ def Delete(product_id):
                            deleting=deleting)
 
 
-@app.route('/info/<int:product_id>')
-def Info(product_id):
-    product = products[product_id-1]
-    product_image = images.get(product_id)
-    return render_template('info.html', product=product, product_image=product_image )
+@app.route('/edit/<int:product_id>')
+def Edit(product_id):
+    editing = next((p for p in products if p['id'] == product_id), None)
+
+    if editing is None:
+        flash(f"Product not found.", "danger")
+        return redirect(url_for('Stock'))
+
+    return render_template('edit.html', editing=editing)
+   
 
 
 
