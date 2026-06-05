@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main.content {
+  flex: 1;
+  padding-bottom: 40px;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -13,7 +30,6 @@ header {
   text-align: center;
   gap: 30px;
   width: 100%;
-  height: 15vh;
 }
 
 header h1 {
@@ -50,18 +66,18 @@ nav a:focus {
   color: rgb(255 205 183);
 }
 
-.content {
-  padding: 20px;
-  height: 75vh;
-}
-
 footer {
   background-color: #193ee0;
   color: rgb(255 205 183);
   text-align: center;
   padding: 10px;
-  bottom: 0;
   width: 100%;
-  height: 10vh;
-  margin-top: 50px;
+  margin-top: auto;
+  position: relative;
+}
+
+#addForm {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
 }

@@ -17,16 +17,33 @@ def Add():
     if request.method == 'POST':
         new_product = {
             "id": len(products) + 1,
-            "category": request.form['category'],
-            "name": request.form['name'],
-            "brand": request.form['brand'],
-            "Supplier": request.form['Supplier'],
-            "quantity": int(request.form['quantity']),
-            "minimum": int(request.form['minimum']),
-            "expiration": request.form['expiration']
+            "category": request.form.get('category'),
+            "name": request.form.get('name').strip(),
+            "brand": request.form.get('brand'),
+            "Supplier": request.form.get('Supplier'),
+            "quantity": int(request.form.get('quantity')),
+            "minimum": int(request.form.get('minimum')),
+            "expiration": request.form.get('expiration')
         }
+
+        errors = []
+        if not new_product["category"]:
+            errors.append("Category is required.")
+        if not new_product["name"]:
+            errors.append("Name is required.")
+        if not new_product["brand"]:
+            errors.append("Brand is required.")
+        if not new_product["Supplier"]:
+            errors.append("Supplier is required.")
+        if not new_product["expiration"]:
+            errors.append("Expiration date is required.")
+
+        if errors:
+            return render_template('add.html', errors=errors)
+
         products.append(new_product)
         return redirect(url_for('Stock'))
+    
     return render_template('add.html')
 
 @app.route('/delete/<int:product_id>', methods=['GET', 'POST'])
