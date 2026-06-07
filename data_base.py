@@ -7,7 +7,7 @@ products = [
         "supplier": "DMI",
         "quantity": 3,
         "minimum_stock": 5,
-        "expiry_date": "31/12/2027",
+        "expiry_date": "2027-12-09",
         "image": "gloves.jpg"
     },
     {
@@ -18,7 +18,7 @@ products = [
         "supplier": "Dontalia",
         "quantity": 2,
         "minimum_stock": 1,
-        "expiry_date": "31/12/2027",
+        "expiry_date": "2028-11-10",
         "image": "optibond.jpg"
     },
     {
@@ -29,7 +29,7 @@ products = [
         "supplier": "Dontalia",
         "quantity": 1,
         "minimum_stock": 1,
-        "expiry_date": "31/12/2027",
+        "expiry_date": "2027-12-01",
         "image": "gelatamp.jpg"
     },
     {
@@ -40,7 +40,7 @@ products = [
         "supplier": "Dontalia",
         "quantity": 1,
         "minimum_stock": 1,
-        "expiry_date": "31/12/2027",
+        "expiry_date": "2028-03-01",
         "image": "venus.jpg"
     },
     {
@@ -51,7 +51,7 @@ products = [
         "supplier": "Henry Schein",
         "quantity": 1,
         "minimum_stock": 1, 
-        "expiry_date": "31/12/2027",
+        "expiry_date": "2027-12-01",
         "image": "palodent.jpg"
     }
 ]

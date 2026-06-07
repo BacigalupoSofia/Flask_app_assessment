@@ -21,10 +21,10 @@ def Add():
             "category": request.form.get('category'),
             "name": request.form.get('name').strip().title(),
             "brand": request.form.get('brand'),
-            "supplier": request.form.get('Supplier'),
+            "supplier": request.form.get('supplier'),
             "quantity": int(request.form.get('quantity')),
             "minimum_stock": int(request.form.get('minimum')),
-            "expiry_date": request.form.get('expiration'),
+            "expiry_date": request.form.get('expiry_date'),
             "image": request.form.get('image', "")
         }
 
@@ -71,12 +71,25 @@ def Delete(product_id):
                            deleting=deleting)
 
 
-@app.route('/edit/<int:product_id>')
+@app.route('/edit/<int:product_id>', methods=['GET', 'POST'])
 def Edit(product_id):
     product = next((p for p in products if p['id'] == product_id), None)
 
     if product is None:
-        flash(f"Product not found.", "danger")
+        flash("Product not found.", "danger")
+        return redirect(url_for('Stock'))
+
+    if request.method == 'POST':
+        product['category'] = request.form.get('category')
+        product['name'] = request.form.get('name')
+        product['brand'] = request.form.get('brand')
+        product['supplier'] = request.form.get('supplier')
+        product['description'] = request.form.get('description')
+        product['quantity'] = int(request.form.get('quantity'))
+        product['minimum_stock'] = int(request.form.get('minimum_stock'))
+        product['expiry_date'] = request.form.get('expiry_date')
+
+        flash(f"{product['name']} updated successfully.", "success")
         return redirect(url_for('Stock'))
 
     return render_template('edit.html', product=product)

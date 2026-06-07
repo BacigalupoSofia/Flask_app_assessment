@@ -15,7 +15,7 @@
     <div class="mb-3">
       <label for="category" class="form-label">Category</label>
       <select id="category" name="category" class="form-select">
-        <option value="{{ product.category}}" selected disabled>
+        <option value="{{ product.category }}" selected>
           {{ product.category}}
         </option>
         <option value="Protection_and_consumables">
@@ -49,8 +49,8 @@
 
       <div class="col-md-6 mb-3">
         <label for="Supplier" class="form-label">Supplier</label>
-        <select id="Supplier" name="Supplier" class="form-select">
-          <option value="{{ product.supplier }}" selected disabled>
+        <select id="Supplier" name="supplier" class="form-select">
+          <option value="{{ product.supplier }}" selected>
             {{ product.supplier }}
           </option>
           <option value="DMI">DMI</option>
@@ -68,7 +68,7 @@
         rows="4"
         class="form-control"
       >
-{{ request.form.get('description', '') }}</textarea
+{{ product.get('description', '') }}</textarea
       >
     </div>
 
@@ -95,12 +95,12 @@
     </div>
 
     <div class="mb-4">
-      <label for="expiration" class="form-label"> Expiration Date </label>
+      <label for="expiry_date" class="form-label"> Expiration Date </label>
       <input
         type="date"
-        id="expiration"
-        name="expiration"
-        value="{{ request.form.get('expiration', '') }}"
+        id="expiry_date"
+        name="expiry_date"
+        value="{{ product.expiry_date }}"
         class="form-control"
       />
     </div>

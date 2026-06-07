@@ -60,7 +60,7 @@
 
             <div class="mb-3">
               <label for="Supplier" class="form-label">Supplier</label>
-              <select id="Supplier" name="Supplier" class="form-select">
+              <select id="Supplier" name="supplier" class="form-select">
                 <option value="" selected disabled>
                   -- Select a supplier --
                 </option>
@@ -89,7 +89,7 @@
                   type="number"
                   id="quantity"
                   name="quantity"
-                  value="{{ request.form.get('quantity', '0') }}"
+                  value="{{ request.form.get('quantity', '') }}"
                   class="form-control"
                 />
               </div>
@@ -102,21 +102,21 @@
                   type="number"
                   id="minimum"
                   name="minimum"
-                  value="{{ request.form.get('minimum', '0') }}"
+                  value="{{ request.form.get('minimum', '') }}"
                   class="form-control"
                 />
               </div>
             </div>
 
             <div class="mb-4">
-              <label for="expiration" class="form-label">
+              <label for="expiry_date" class="form-label">
                 Expiration Date
               </label>
               <input
                 type="date"
-                id="expiration"
-                name="expiration"
-                value="{{ request.form.get('expiration', '') }}"
+                id="expiry_date"
+                name="expiry_date"
+                value="{{ request.form.get('expiry_date', '') }}"
                 class="form-control"
               />
             </div>
