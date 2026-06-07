@@ -133,8 +133,18 @@
               >
             </div>
 
-            <div class="d-grid">
-              <button type="submit" class="btn btn-primary">Add Product</button>
+            <div class="row">
+              <div class="col-md-9">
+                <button type="submit" class="btn btn-primary w-100">
+                  Add Product
+                </button>
+              </div>
+
+              <div class="col-md-3 text-end">
+                <a href="{{ url_for('Stock') }}" class="btn btn-danger">
+                  Cancel
+                </a>
+              </div>
             </div>
           </form>
         </div>
