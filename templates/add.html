@@ -121,26 +121,19 @@
               />
             </div>
 
-            <div class="custom-file mb-4">
-              <input
-                type="file"
-                class="custom-file-input"
-                id="customFile"
-                name="image"
-              />
-              <label class="custom-file-label" for="customFile"
-                >Choose file</label
-              >
+            <div class="mb-4">
+              <label for="file" class="form-label">Choose file</label>
+              <input class="form-control" type="file" id="file" name="image" />
             </div>
 
             <div class="row">
-              <div class="col-md-9">
+              <div class="col col-sm-9">
                 <button type="submit" class="btn btn-primary w-100">
                   Add Product
                 </button>
               </div>
 
-              <div class="col-md-3 text-end">
+              <div class="col col-sm-3 text-end">
                 <a href="{{ url_for('Stock') }}" class="btn btn-danger">
                   Cancel
                 </a>

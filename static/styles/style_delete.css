@@ -12,7 +12,6 @@
 
 #delete-table > div {
   flex: 1;
-  min-width: 300px;
 }
 
 #delete-table table {

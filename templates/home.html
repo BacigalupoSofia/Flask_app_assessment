@@ -9,14 +9,16 @@ endblock %} {% block content %}
 >
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img
-        src="{{ url_for('static', filename='images/List.png') }}"
-        class="d-block w-100"
-        alt="Items list picture"
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Stock of Dental Items</h5>
-      </div>
+      <a href="{{ url_for ('Stock')}}">
+        <img
+          src="{{ url_for('static', filename='images/List.png') }}"
+          class="d-block w-100"
+          alt="Items list picture"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Stock of Dental Items</h5>
+        </div></a
+      >
     </div>
 
     <div class="carousel-item">
@@ -53,7 +55,7 @@ endblock %} {% block content %}
     </div>
   </div>
 
-  <!-- controls -->
+  <!-- controls for carousel -->
   <button
     class="carousel-control-prev"
     type="button"
