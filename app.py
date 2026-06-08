@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-from data_base import products
+from data_base import products, users
 
 
 app = Flask(__name__)
@@ -95,7 +95,14 @@ def Edit(product_id):
     return render_template('edit.html', product=product)
    
 
-
+@app.route ('/login', methods = ['GET', 'POST'])
+def Login (username, password):
+    if request.method == 'POST':
+        for user in users:
+            if request.form.get('user') == user.name and request.form.get('password') == password:
+                user_log = user
+                return render_template ('login.html', user_log=user_log)
+    
 
 
 if __name__ == "__main__":

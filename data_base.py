@@ -8,7 +8,8 @@ products = [
         "quantity": 3,
         "minimum_stock": 5,
         "expiry_date": "2027-12-09",
-        "image": "gloves.jpg"
+        "image": "gloves.jpg",
+        "description": ""
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@ products = [
         "quantity": 2,
         "minimum_stock": 1,
         "expiry_date": "2028-11-10",
-        "image": "optibond.jpg"
+        "image": "optibond.jpg",
+        "description": ""
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@ products = [
         "quantity": 1,
         "minimum_stock": 1,
         "expiry_date": "2027-12-01",
-        "image": "gelatamp.jpg"
+        "image": "gelatamp.jpg",
+        "description": ""
     },
     {
         "id": 4,
@@ -41,7 +44,8 @@ products = [
         "quantity": 1,
         "minimum_stock": 1,
         "expiry_date": "2028-03-01",
-        "image": "venus.jpg"
+        "image": "venus.jpg",
+        "description": ""
     },
     {
         "id": 5,
@@ -52,20 +56,14 @@ products = [
         "quantity": 1,
         "minimum_stock": 1, 
         "expiry_date": "2027-12-01",
-        "image": "palodent.jpg"
+        "image": "palodent.jpg",
+        "description": ""
     }
 ]
 
-
-products_details = [
-    {"name": "Latex Powder Free Gloves Small Pack 100",
-     "description": ""},
-    {"name": "Optibond FL primer 8ml",
-     "description": ""},
-    {"name": "Gelatamp Jar 50 units",
-     "description": ""},
-    {"name": "Venus Pearl Syringe A1 3g",
-     "description": ""},
-    {"name": "Matrix bands Palodent standard 100 units",
-     "description": ""}
+users= [
+    {'name': 'Clinic 1'
+     'password': 'Clinic1!'}
+     {'name': 'Clinic 2'
+      'password': 'Clinic2!'}
 ]
