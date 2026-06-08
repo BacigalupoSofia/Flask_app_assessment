@@ -63,7 +63,11 @@ products = [
 
 users= [
     {'name': 'Clinic1',
-     'password': 'Clinic1!'},
-     {'name': 'Clinic2',
-      'password': 'Clinic2!'}
+     'password': 'Clinic1!',
+     'address': 'Dublin 1, Ireland',
+     'phonenumber': '088988765'},
+    {'name': 'Clinic2',
+     'password': 'Clinic2!',
+     'address': 'Dublin 2, Ireland',
+     'phonenumber': '088888888'}
 ]
