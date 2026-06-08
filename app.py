@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from data_base import products, users
 
 
@@ -102,11 +102,12 @@ def Login():
             if (request.form.get('name') == user['name'] and
                 request.form.get('password') == user['password']):
 
-                user_log = user
-                return render_template('home.html', user_log=user_log)
+                session['user_log'] = user
+                return redirect(url_for('Home'))
 
-        return "Invalid username or password"
-
+        flash('Invalid username or password', 'error')
+        return redirect(url_for('Login'))
+        
     return render_template('log_in.html') 
 
 
