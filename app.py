@@ -112,8 +112,8 @@ def Login():
 
 @app.route('/account')
 def Account ():
-
-    return render_template ('my_account.html')
+    user = session.get('user_log')
+    return render_template ('my_account.html', user=user)
 
 if __name__ == "__main__":
     app.run(debug=True)

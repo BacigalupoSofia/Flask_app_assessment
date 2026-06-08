@@ -1,2 +1,34 @@
 {% extends "base.html" %} {% block title %} My Account {% endblock %} {% block
-content %} WORKING RENDER {% endblock %}
+content %}
+
+<div class="card p-4 mt-4" style="max-width: 500px; margin: auto">
+  <h3 class="mb-4 text-center">Welcome {{user.name}} !</h3>
+
+  <div class="d-flex justify-content-between border-bottom py-2">
+    <span class="fw-bold">Name</span>
+    <span>{{ user.name }}</span>
+  </div>
+
+  <div class="d-flex justify-content-between border-bottom py-2">
+    <span class="fw-bold">Address</span>
+    <span>{{ user.address }}</span>
+  </div>
+
+  <div class="d-flex justify-content-between py-2">
+    <span class="fw-bold">Phone Number</span>
+    <span>{{ user.phonenumber }}</span>
+  </div>
+</div>
+
+<div class="d-flex flex-column flex-sm-row justify-content-center p-4">
+  <a href="#" class="btn btn-outline-success m-2">Edit</a>
+  <a href="#" class="btn btn-outline-danger m-2">Log out</a>
+</div>
+
+<div class="d-flex flex-column flex-sm-row p-4">
+  <a href="{{url_for('Stock')}}" class="btn btn-secondary m-2"> My Stock </a>
+  <a href="#" class="btn btn-secondary m-2"> Orders and Providers </a>
+  <a href="#" class="btn btn-secondary m-2"> Low stock list </a>
+</div>
+
+{% endblock %}
