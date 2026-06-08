@@ -40,7 +40,7 @@
         {% if session.get('user_log') %}
         <a href="#">My Account</a>
         {% else %}
-        <a class="nav-link d-inline" href="{{ url_for('Login') }}"> Log in </a>
+        <a href="{{ url_for('Login') }}"> Log in </a>
         {% endif %}
       </nav>
     </header>
