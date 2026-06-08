@@ -1,5 +1,5 @@
-{% extends "base.html" %} {% block title %} Add Product - Dental Inventory App
-{% endblock %} {% block content %} {% if errors %}
+{% extends "base.html" %} {% block title %} Add Product {% endblock %} {% block
+content %} {% if errors %}
 <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
   <strong>Missing information!</strong>
   {% for err in errors %} {{ err }} {% endfor %}
