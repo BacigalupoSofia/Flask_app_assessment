@@ -9,7 +9,18 @@ endblock %} {% block content %}
 >
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <a href="{{ url_for ('Stock')}}">
+      <a
+        {%
+        if
+        user
+        %}
+        href="{{ url_for ('Stock')}}"
+        {%
+        else
+        %}
+        href="{{ url_for('Login') }}"
+      >
+        {% endif %}
         <img
           src="{{ url_for('static', filename='images/List.png') }}"
           class="d-block w-100"
@@ -17,8 +28,8 @@ endblock %} {% block content %}
         />
         <div class="carousel-caption d-none d-md-block">
           <h5>Stock of Dental Items</h5>
-        </div></a
-      >
+        </div>
+      </a>
     </div>
 
     <div class="carousel-item">

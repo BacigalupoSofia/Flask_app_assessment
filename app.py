@@ -7,7 +7,8 @@ app.secret_key = "your_secret_key"
 
 @app.route('/')
 def Home():
-    return render_template('home.html')
+    user = session.get('user_log')
+    return render_template('home.html', user=user)
 
 @app.route('/stock')
 def Stock():
