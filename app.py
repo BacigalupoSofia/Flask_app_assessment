@@ -95,14 +95,19 @@ def Edit(product_id):
     return render_template('edit.html', product=product)
    
 
-@app.route ('/login', methods = ['GET', 'POST'])
-def Login (username, password):
+@app.route('/login', methods=['GET', 'POST'])
+def Login():
     if request.method == 'POST':
         for user in users:
-            if request.form.get('user') == user.name and request.form.get('password') == password:
+            if (request.form.get('name') == user['name'] and
+                request.form.get('password') == user['password']):
+
                 user_log = user
-                return render_template ('login.html', user_log=user_log)
-    
+                return render_template('home.html', user_log=user_log)
+
+        return "Invalid username or password"
+
+    return render_template('log_in.html') 
 
 
 if __name__ == "__main__":

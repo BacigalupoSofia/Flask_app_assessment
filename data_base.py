@@ -62,8 +62,8 @@ products = [
 ]
 
 users= [
-    {'name': 'Clinic 1'
-     'password': 'Clinic1!'}
-     {'name': 'Clinic 2'
+    {'name': 'Clinic1',
+     'password': 'Clinic1!'},
+     {'name': 'Clinic2',
       'password': 'Clinic2!'}
 ]
