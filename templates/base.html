@@ -38,7 +38,7 @@
         <a href="{{ url_for('Home') }}"> Home </a>
 
         {% if session.get('user_log') %}
-        <a href="#">My Account</a>
+        <a href="{{url_for('Account')}}">My Account</a>
         {% else %}
         <a href="{{ url_for('Login') }}"> Log in </a>
         {% endif %}

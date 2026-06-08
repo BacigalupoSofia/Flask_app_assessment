@@ -110,6 +110,10 @@ def Login():
         
     return render_template('log_in.html') 
 
+@app.route('/account')
+def Account ():
+
+    return render_template ('my_account.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
