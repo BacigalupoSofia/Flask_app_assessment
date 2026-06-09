@@ -89,7 +89,7 @@ content %} {% if errors %}
                   type="number"
                   id="quantity"
                   name="quantity"
-                  value="{{ request.form.get('quantity', '') }}"
+                  value="{{ request.form.get('quantity', '0') }}"
                   class="form-control"
                 />
               </div>
@@ -102,7 +102,7 @@ content %} {% if errors %}
                   type="number"
                   id="minimum"
                   name="minimum"
-                  value="{{ request.form.get('minimum', '') }}"
+                  value="{{ request.form.get('minimum', '0') }}"
                   class="form-control"
                 />
               </div>
