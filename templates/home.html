@@ -19,8 +19,10 @@ endblock %} {% block content %}
         else
         %}
         href="{{ url_for('Login') }}"
+        {%
+        endif
+        %}
       >
-        {% endif %}
         <img
           src="{{ url_for('static', filename='images/List.png') }}"
           class="d-block w-100"

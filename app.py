@@ -111,6 +111,11 @@ def Login():
         
     return render_template('log_in.html') 
 
+@app.route('/logout')
+def Logout():
+    session.clear()   
+    return redirect(url_for('Login'))
+
 @app.route('/account')
 def Account ():
     user = session.get('user_log')
