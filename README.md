@@ -55,7 +55,7 @@ git clone https://github.com/BacigalupoSofia/Flask_app_assessment.git
 cd Flask_app_assessment
 ```
 
-### 2,  Create and activate a virtual environment
+#### 2,  Create and activate a virtual environment
 macOS / Linux
 ```
 python3 -m venv venv
@@ -67,7 +67,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-### 3. Install dependencies
+#### 3. Install dependencies
 ```
 pip install -r requirements.txt
 ```
@@ -79,7 +79,7 @@ Open in browser
 ```http://127.0.0.1:5000```
 
 ---
-### Demo Accounts
+## Demo Accounts
 
 The application uses predefined users stored in data_base.py:
 ```
@@ -92,7 +92,7 @@ Password: Clinic2!
 ```
 
 ---
-### Project Structure
+## Project Structure
 ```
 📁 Flask_app_assessment 
 ├── 📄 app.py
@@ -104,11 +104,12 @@ Password: Clinic2!
 ```
 
 ---
-### Security Note
+## Security Note
 
 This project is intended for educational purposes only. It uses hardcoded demo user accounts and in-memory storage.
 
 ---
-### Future Improvements
+## Future Improvements
 - Replace in-memory storage with a database.
+- Add a "Create new user" feature to link to a specific data base for the user. 
 - Improve inventory analytics and reporting to see orders, low stock list and providers. 
